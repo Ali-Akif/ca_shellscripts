@@ -16,4 +16,12 @@ while [ $COUNT1 -le 4 ]; do
     ((COUNT1++))
 done
 
+
+while [ $COUNT2 -le 3 ]; do
+    if [ "${b[$COUNT2]}" -eq "${c[$COUNT2]}" ] ; then
+        final+=("${b[$COUNT2]}")
+    fi
+    ((COUNT2++))
+done
+
 echo -e "${final[@]}"
